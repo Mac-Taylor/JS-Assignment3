@@ -1,26 +1,61 @@
 // JavaScript Objects Homework
 
-function makeTraveler (amount, name, isHealthy) {
+function makeTraveler (name) {
     let traveler = [];
+    /*let amount = [5, 7, 4, 6, 11] */
     return {
-        amount: amount,
         name: name,
+        amount: 10,
         isHealthy: true,
     }
 }
 
-let output = {
+let Jebediah = makeTraveler('Jebediah');
+console.log(Jebediah);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let output = {
     individuals: [
-        makeTraveler(5, 'Ezekiel', true),
-        makeTraveler(7, 'Jebediah', false),
-        makeTraveler(4, 'Sarah', true),
-        makeTraveler(6, 'Mary', false),
-        makeTraveler(11, 'Hezekiah', true),
+        makeTraveler('Ezekiel'),
+        makeTraveler('Jebediah'),
+        makeTraveler('Sarah'),
+        makeTraveler('Mary'),
+        makeTraveler('Hezekiah'),
     ],
+}; */
 
-};
+/*
+console.log(output.individuals[1]); 
+*/
 
-console.log(output.individuals[1])
+
 
 
 
