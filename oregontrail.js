@@ -1,27 +1,42 @@
-// JavaScript Objects Homework
+// JavaScript Objects Homework | OREGON TRAIL GAME 
 
 function makeTraveler (name) {
-    let traveler = [];
     return {
         name: name,
         amount: Math.floor(Math.random() * 100),
         isHealthy: true,
     }
-}
+} 
 
-let Jebediah = makeTraveler('Hezekiah');
-console.log(Jebediah); 
+let Hezekiah = makeTraveler('Hezekiah');
+console.log(Hezekiah); 
 
 function makeWagon (capacity) {
-    let wagon = [];
     return {
         capacity: capacity,
         passengers: [],
     }
-}
+} 
 
 let wagon1 = makeWagon(5);
-console.log (wagon1);
+console.log (wagon1);  
+
+// Input: some traveler's object
+// Output: Boolean (hunt success?) 
+
+function hunt(traveler) {
+   if (Math.random() > 0.50) {
+       traveler.amount = traveler.amount + 100;
+       return true;
+   }
+   else {
+       return false;
+   }
+} 
+
+let newoutput = hunt(Hezekiah);
+console.log(newoutput);
+console.log(Hezekiah); 
 
 
 
