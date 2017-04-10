@@ -5,7 +5,7 @@ function makeTraveler (name) {
     /*let amount = [5, 7, 4, 6, 11] */
     return {
         name: name,
-        amount: 10,
+        amount: Math.floor(Math.random() * 100),
         isHealthy: true,
     }
 }
@@ -13,7 +13,9 @@ function makeTraveler (name) {
 let Jebediah = makeTraveler('Jebediah');
 console.log(Jebediah);
 
+function makeWagon (capacity) {
 
+}
 
 
 
