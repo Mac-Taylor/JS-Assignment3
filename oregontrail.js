@@ -8,8 +8,8 @@ function makeTraveler (name) {
     }
 } 
 
-let Hezekiah = makeTraveler('Hezekiah');
-console.log(Hezekiah); 
+let Hezekiah = makeTraveler('Jebediah');
+console.log(Jebediah); 
 
 function makeWagon (capacity) {
     return {
@@ -34,7 +34,7 @@ function hunt(traveler) {
    }
 } 
 
-let newoutput = hunt(Hezekiah);
+let newoutput = hunt(Jebediah);
 console.log(newoutput);
 console.log(Hezekiah); 
 
