@@ -90,9 +90,36 @@ console.log(join(wagon1, Ann)); // returns wagon object with remaining capacity 
 // quarantine(wagon)
 // Return true if there is at least one unhealthy person in the wagon. Return false if not.
 
+let wagon2 = {
+    capacity: 8,
+    passengers: [
+        { name: 'Ann', foodamount: 30, isHealthy: true, },
+        { name: 'Steve', foodamount: 70, isHealthy: true, },
+        { name: 'John', foodamount: 40, isHealthy: true, }],
+};
+
+let wagon3 = {
+    capacity: 8,
+    passengers: [
+        { name: 'Ann', foodamount: 30, isHealthy: true, },
+        { name: 'Steve', foodamount: 70, isHealthy: false, },
+        { name: 'John', foodamount: 40, isHealthy: true, }],
+};
+
 function quarantine(wagon) {
-    
+
+    for (let i = 0; i < wagon.passengers.length; i++) {
+        if (wagon.passengers[i].isHealthy === false) {
+            return true;
+        }
+    }
+    return false;
 }
+
+console.log(quarantine(wagon2)); // returns false
+console.log(quarantine(wagon3)); // returns true
+
+// DONE.
 
 // food(wagon)
 // Return the total amount of food among all occupants of the wagon.
