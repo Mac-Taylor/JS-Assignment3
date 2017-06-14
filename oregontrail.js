@@ -124,6 +124,23 @@ console.log(quarantine(wagon3)); // returns true
 // food(wagon)
 // Return the total amount of food among all occupants of the wagon.
 
+let wagon4 = {
+    capacity: 8,
+    passengers: [
+        { name: 'Ann', foodamount: 30, isHealthy: true, },
+        { name: 'Steve', foodamount: 70, isHealthy: true, },
+        { name: 'John', foodamount: 40, isHealthy: true, }],
+};
+
+function food(wagon) {
+    let totalfood = 0;
+    for (let i = 0; i < wagon.passengers.length; i++) {
+        totalfood = totalfood + wagon.passengers[i].food;
+    }
+    return totalfood;
+}
+
+console.log(food(wagon4));
 
 
 
