@@ -68,8 +68,31 @@ console.log(eat(Sarah)); // returns Sarah object with 10 food and isHealthy = fa
 // join(wagon, traveler)
 // Add the traveler to the wagon if there is space. If there is not enough capacity, don't add them.
 
+let wagon1 = { capacity: 8, passengers: [], };
+let Ann = { name: 'Ann', foodamount: 30, isHealthy: true, };
+
+function join(wagon, traveler) {
+    let passengers = wagon.passengers;
+    if (wagon.capacity > passengers.length) {
+        passengers.push(traveler);
+        wagon.capacity = wagon.capacity - 1;
+    } else {
+        return 'No more room in the wagon!'
+    }
+    return wagon;
+};
+
+console.log(join(wagon1, Ann)); // returns wagon object with remaining capacity and array of traveler objects
+// unless the wagon is full, in which case function tells you there is no more room in the wagon.
+
+// DONE.
+
 // quarantine(wagon)
 // Return true if there is at least one unhealthy person in the wagon. Return false if not.
+
+function quarantine(wagon) {
+    
+}
 
 // food(wagon)
 // Return the total amount of food among all occupants of the wagon.
